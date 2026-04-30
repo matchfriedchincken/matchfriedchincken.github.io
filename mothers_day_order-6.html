@@ -1,0 +1,1027 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>嬤記香香雞｜母親節炸春雞預訂</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;700;900&family=Noto+Sans+TC:wght@400;700&display=swap');
+
+  :root {
+    --cream:   #FDF6EE;
+    --cream2:  #F5E9DA;
+    --rose:    #C8607A;
+    --rose2:   #E8849A;
+    --rose3:   #F2B8C6;
+    --rose4:   #FDE8EE;
+    --gold:    #C8922A;
+    --brown:   #7A4A2E;
+    --brown2:  #5C3320;
+    --green:   #6B8F5E;
+    --red:     #B91C1C;
+    --border:  #D4A0B0;
+    --shadow:  rgba(200,96,122,0.15);
+    --ink:     #3D1F2A;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Noto Serif TC', serif;
+    background: linear-gradient(160deg, #FDE8EE 0%, #FDF6EE 40%, #FDE8EE 100%);
+    min-height: 100vh;
+    padding: 16px;
+    position: relative;
+    overflow-x: hidden;
+  }
+
+  /* 背景花瓣裝飾 */
+  body::before {
+    content: '';
+    position: fixed; inset: 0;
+    background-image:
+      radial-gradient(ellipse 120px 80px at 10% 15%, rgba(232,132,154,0.12) 0%, transparent 70%),
+      radial-gradient(ellipse 100px 60px at 90% 25%, rgba(200,96,122,0.10) 0%, transparent 70%),
+      radial-gradient(ellipse 80px 50px at 20% 80%, rgba(232,132,154,0.08) 0%, transparent 70%),
+      radial-gradient(ellipse 90px 55px at 85% 75%, rgba(200,96,122,0.10) 0%, transparent 70%);
+    pointer-events: none; z-index: 0;
+  }
+
+  /* ── Header ── */
+  .header {
+    background: linear-gradient(135deg, #C8607A 0%, #E8849A 50%, #C8607A 100%);
+    border-radius: 20px;
+    padding: 32px 20px 28px;
+    text-align: center;
+    box-shadow: 0 8px 32px rgba(200,96,122,0.35), inset 0 1px 0 rgba(255,255,255,0.3);
+    margin-bottom: 20px;
+    position: relative;
+    overflow: hidden;
+  }
+  .header::before {
+    content: '';
+    position: absolute; inset: 0;
+    background-image:
+      radial-gradient(circle 3px at 15% 20%, rgba(255,255,255,0.4) 0%, transparent 100%),
+      radial-gradient(circle 2px at 80% 15%, rgba(255,255,255,0.3) 0%, transparent 100%),
+      radial-gradient(circle 4px at 25% 75%, rgba(255,255,255,0.25) 0%, transparent 100%),
+      radial-gradient(circle 3px at 70% 80%, rgba(255,255,255,0.3) 0%, transparent 100%),
+      radial-gradient(circle 2px at 50% 10%, rgba(255,255,255,0.35) 0%, transparent 100%),
+      radial-gradient(circle 3px at 90% 55%, rgba(255,255,255,0.25) 0%, transparent 100%);
+    pointer-events: none;
+  }
+  .header-flower {
+    font-size: 2rem;
+    margin-bottom: 8px;
+    letter-spacing: 6px;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+  }
+  .store-name {
+    font-size: clamp(1.1rem, 5vw, 1.6rem);
+    font-weight: 900;
+    color: rgba(255,255,255,0.95);
+    letter-spacing: 3px;
+    text-shadow: 0 1px 6px rgba(0,0,0,0.2);
+    margin-bottom: 14px;
+  }
+  .header-msg {
+    background: rgba(255,255,255,0.2);
+    border: 1px solid rgba(255,255,255,0.4);
+    border-radius: 12px;
+    padding: 14px 16px;
+    margin: 0 4px 16px;
+    backdrop-filter: blur(4px);
+  }
+  .header-thanks {
+    font-size: clamp(1.3rem, 5vw, 1.7rem);
+    font-weight: 900;
+    color: #fff;
+    letter-spacing: 2px;
+    line-height: 1.6;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  }
+  .header-sub {
+    font-size: 1.1rem;
+    color: rgba(255,255,255,0.9);
+    margin-top: 6px;
+    letter-spacing: 1px;
+    line-height: 1.7;
+  }
+  .badge {
+    display: block;
+    background: rgba(255,255,255,0.95);
+    color: var(--rose);
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 16px 18px;
+    border-radius: 16px;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    line-height: 1.9;
+    text-align: left;
+  }
+  .badge-title {
+    font-size: 1.15rem;
+    font-weight: 900;
+    color: var(--rose);
+    letter-spacing: 2px;
+    margin-bottom: 6px;
+    display: block;
+  }
+  .badge-items {
+    font-size: 1rem;
+    color: var(--brown);
+    line-height: 2;
+    display: block;
+    margin-bottom: 8px;
+  }
+  .badge-price {
+    display: block;
+    font-size: 2.2rem;
+    font-weight: 900;
+    color: var(--rose);
+    letter-spacing: 3px;
+    text-align: center;
+    animation: priceGlow 2s ease-in-out infinite alternate;
+  }
+  @keyframes priceGlow {
+    from { text-shadow: 0 0 8px rgba(200,96,122,0.7), 0 0 18px rgba(200,96,122,0.4), 0 0 35px rgba(232,132,154,0.3); }
+    to   { text-shadow: 0 0 14px rgba(200,96,122,1), 0 0 28px rgba(200,96,122,0.7), 0 0 55px rgba(232,132,154,0.6), 0 0 80px rgba(255,180,200,0.3); }
+  }
+
+  /* ── 通用 Panel ── */
+  .panel {
+    background: rgba(255,255,255,0.85);
+    border: 2px solid var(--rose3);
+    border-radius: 16px;
+    padding: 22px 18px;
+    margin-bottom: 16px;
+    box-shadow: 0 4px 20px var(--shadow);
+    position: relative;
+    backdrop-filter: blur(8px);
+  }
+  .panel-title {
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: var(--rose);
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--rose3);
+    letter-spacing: 2px;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .panel-title-icon { font-size: 1.4rem; }
+
+  /* ── 日期選擇 ── */
+  .date-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+  .date-btn {
+    background: var(--cream);
+    border: 2.5px solid var(--rose3);
+    border-radius: 14px;
+    padding: 18px 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s;
+    position: relative;
+  }
+  .date-btn:hover:not(.soldout-day) {
+    border-color: var(--rose);
+    background: var(--rose4);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px var(--shadow);
+  }
+  .date-btn.selected {
+    background: linear-gradient(135deg, var(--rose) 0%, var(--rose2) 100%);
+    border-color: var(--rose);
+    box-shadow: 0 6px 20px rgba(200,96,122,0.4);
+    transform: translateY(-2px);
+  }
+  .date-btn.selected .db-month,
+  .date-btn.selected .db-date,
+  .date-btn.selected .db-day,
+  .date-btn.selected .db-remain { color: #fff; }
+  .date-btn.soldout-day {
+    background: #f0ece8; border-color: #d4c8c0;
+    cursor: not-allowed; opacity: 0.6;
+  }
+  .db-month { font-size: 1rem; font-weight: 700; color: var(--rose); letter-spacing: 1px; margin-bottom: 2px; }
+  .db-date  { font-size: 2.4rem; font-weight: 900; color: var(--brown); line-height: 1; }
+  .db-day   { font-size: 1.1rem; font-weight: 700; color: var(--brown2); margin: 4px 0 6px; }
+  .db-remain { font-size: 1rem; color: #7A6060; }
+  .db-soldout-tag {
+    display: none; background: #B91C1C; color: #fff;
+    font-size: 0.9rem; font-weight: 700; padding: 3px 12px;
+    border-radius: 20px; margin-top: 6px; letter-spacing: 1px;
+  }
+  .date-btn.soldout-day .db-soldout-tag { display: inline-block; }
+  .date-err { color: var(--red); font-size: 1.1rem; font-weight: 700; margin-top: 12px; display: none; }
+  .date-err.show { display: block; }
+
+  /* ── 庫存面板 ── */
+  .stock-tabs {
+    display: flex; border-radius: 10px; overflow: hidden;
+    border: 2px solid var(--rose3); margin-bottom: 16px;
+  }
+  .stock-tab {
+    flex: 1; text-align: center; padding: 10px 4px;
+    font-size: 1rem; font-weight: 700; color: var(--brown2);
+    cursor: pointer; background: var(--cream2);
+    border-right: 1px solid var(--rose3); transition: all 0.15s;
+  }
+  .stock-tab:last-child { border-right: none; }
+  .stock-tab.active { background: var(--rose); color: #fff; }
+
+  .stock-row {
+    display: flex; justify-content: space-between; align-items: center;
+    margin-bottom: 12px;
+  }
+  .stock-label { font-size: 1.3rem; font-weight: 700; color: var(--brown2); }
+  .stock-counter { display: flex; align-items: baseline; gap: 5px; }
+  .stock-num {
+    font-size: 3.4rem; font-weight: 900; color: var(--rose);
+    line-height: 1; transition: transform 0.2s, color 0.3s;
+    display: inline-block;
+  }
+  .stock-num.pop { transform: scale(1.3); color: var(--red); }
+  .stock-unit { font-size: 1.3rem; font-weight: 700; color: var(--brown2); }
+
+  .progress-wrap {
+    height: 18px; border-radius: 20px;
+    border: 2px solid var(--rose3);
+    background: var(--cream2); margin-bottom: 6px; overflow: hidden;
+  }
+  .progress-bar {
+    height: 100%; border-radius: 20px;
+    background: linear-gradient(90deg, var(--rose) 0%, var(--rose2) 100%);
+    transition: width 0.6s ease; width: 0%;
+  }
+  .progress-label {
+    font-size: 1rem; color: #9A7080;
+    text-align: right; margin-bottom: 14px; font-style: italic;
+  }
+
+  .slot-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .slot-card {
+    background: var(--cream2); border: 2px solid var(--rose3);
+    border-radius: 10px; padding: 12px 8px; text-align: center;
+  }
+  .slot-card.slot-full { background: #ede8e4; border-color: #ccc; }
+  .slot-card-time { font-size: 1.3rem; font-weight: 900; color: var(--rose); }
+  .slot-card.slot-full .slot-card-time { color: #aaa; }
+  .slot-card-left { font-size: 1rem; color: var(--brown2); margin-top: 3px; }
+  .slot-card.slot-full .slot-card-left { color: var(--red); font-weight: 700; }
+
+  /* 售完橫幅 */
+  .soldout-banner {
+    display: none; background: var(--rose); color: #fff;
+    font-size: 1.4rem; font-weight: 900; text-align: center;
+    padding: 16px; border-radius: 14px; margin-bottom: 16px;
+    letter-spacing: 3px; box-shadow: 0 4px 16px var(--shadow);
+  }
+  .soldout-banner.show { display: block; }
+
+  /* ── 注意事項 ── */
+  .notice-panel {
+    background: linear-gradient(135deg, #FFF5F8 0%, #FDE8EE 100%);
+    border: 2px solid var(--rose3);
+    border-radius: 16px;
+    padding: 22px 18px;
+    margin-bottom: 16px;
+    box-shadow: 0 4px 20px var(--shadow);
+  }
+  .notice-title { font-size: 1.4rem; font-weight: 900; color: var(--rose); margin-bottom: 10px; letter-spacing: 2px; }
+  .notice-text  { font-size: 1.2rem; color: var(--ink); line-height: 2; }
+  .notice-text strong { color: var(--red); }
+
+  .agree-row {
+    display: flex; align-items: center; gap: 14px;
+    margin-top: 16px; padding: 16px;
+    border: 2.5px solid var(--rose3);
+    border-radius: 12px;
+    background: rgba(255,255,255,0.8);
+    cursor: pointer; transition: all 0.2s;
+  }
+  .agree-row.blink-border { animation: borderBlink 0.9s infinite; }
+  @keyframes borderBlink {
+    0%,100% { border-color: var(--rose); box-shadow: 0 0 0 0 rgba(200,96,122,0); }
+    50%      { border-color: var(--rose); box-shadow: 0 0 0 5px rgba(200,96,122,0.2); }
+  }
+  .big-checkbox {
+    width: 44px; height: 44px; border-radius: 10px;
+    border: 2.5px solid var(--rose3);
+    background: var(--cream2);
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0; transition: all 0.2s;
+  }
+  .big-checkbox.checked { background: var(--green); border-color: var(--green); }
+  .check-icon { display: none; color: #fff; font-size: 1.6rem; font-weight: 900; }
+  .big-checkbox.checked .check-icon { display: block; }
+  .agree-label { font-size: 1.25rem; font-weight: 700; color: var(--ink); }
+  .agree-hint  { font-size: 1rem; color: var(--rose); margin-top: 4px; font-weight: 700; }
+
+  /* ── 表單 ── */
+  .form-panel {
+    background: rgba(255,255,255,0.85);
+    border: 2px solid var(--rose3);
+    border-radius: 16px;
+    padding: 22px 18px;
+    margin-bottom: 16px;
+    box-shadow: 0 4px 20px var(--shadow);
+    transition: opacity 0.3s;
+    backdrop-filter: blur(8px);
+  }
+  .form-panel.locked { opacity: 0.35; pointer-events: none; user-select: none; }
+
+  .field-group { margin-bottom: 22px; }
+  .field-label {
+    font-size: 1.25rem; font-weight: 700; color: var(--brown);
+    margin-bottom: 10px; display: flex; align-items: center; gap: 8px;
+  }
+  .req { color: var(--red); font-size: 1.3rem; }
+
+  .big-input {
+    width: 100%; font-size: 1.3rem;
+    font-family: 'Noto Serif TC', serif;
+    padding: 16px; border: 2px solid var(--rose3);
+    border-radius: 10px; background: var(--cream);
+    color: var(--ink); outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+  .big-input:focus {
+    border-color: var(--rose);
+    box-shadow: 0 0 0 4px rgba(200,96,122,0.12);
+    background: #fff;
+  }
+  .big-input::placeholder { color: #C0A0A8; font-style: italic; }
+
+  /* 日期顯示欄 */
+  .date-display {
+    display: flex; align-items: center; gap: 14px;
+    background: linear-gradient(135deg, var(--rose) 0%, var(--rose2) 100%);
+    border: 2px solid var(--rose);
+    border-radius: 10px; padding: 16px;
+  }
+  .date-display-icon { font-size: 1.8rem; }
+  .date-display-text { font-size: 1.6rem; font-weight: 900; color: #fff; letter-spacing: 1px; }
+  .date-display-hint { font-size: 1rem; color: rgba(255,255,255,0.8); margin-top: 2px; }
+
+  /* 時段選擇 */
+  .slot-picker { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .timeslot {
+    background: var(--cream2); border: 2.5px solid var(--rose3);
+    border-radius: 12px; padding: 16px 10px;
+    text-align: center; transition: all 0.2s; cursor: pointer;
+  }
+  .timeslot:hover:not(.full) {
+    border-color: var(--rose); background: var(--rose4);
+    transform: translateY(-2px); box-shadow: 0 4px 12px var(--shadow);
+  }
+  .timeslot.selected {
+    background: linear-gradient(135deg, var(--rose) 0%, var(--rose2) 100%);
+    border-color: var(--rose);
+    box-shadow: 0 4px 16px rgba(200,96,122,0.4);
+  }
+  .timeslot.selected .ts-time,
+  .timeslot.selected .ts-left { color: #fff; }
+  .timeslot.full { background: #ece8e4; border-color: #ccc; cursor: not-allowed; opacity: 0.6; }
+  .ts-time { font-size: 1.8rem; font-weight: 900; color: var(--rose); letter-spacing: 1px; }
+  .ts-left { font-size: 1rem; color: var(--brown2); margin-top: 4px; }
+  .full-tag {
+    display: inline-block; background: #B91C1C; color: #fff;
+    font-size: 0.9rem; font-weight: 700; padding: 2px 10px;
+    border-radius: 20px; margin-top: 6px; letter-spacing: 1px;
+  }
+
+  /* 數量 */
+  .qty-fixed {
+    display: flex; align-items: center; gap: 14px;
+    background: var(--cream2); border: 2px solid var(--rose3);
+    border-radius: 10px; padding: 16px;
+  }
+  .qty-fixed-num { font-size: 2.6rem; font-weight: 900; color: var(--rose); }
+  .qty-fixed-note { font-size: 1.1rem; color: var(--brown2); line-height: 1.8; }
+  .qty-fixed-note strong { color: var(--red); }
+
+  /* 錯誤訊息 */
+  .error-msg { color: var(--red); font-size: 1.1rem; font-weight: 700; margin-top: 8px; display: none; }
+  .error-msg.show { display: block; }
+  .ts-error  { color: var(--red); font-size: 1.1rem; font-weight: 700; margin-top: 10px; display: none; }
+  .ts-error.show  { display: block; }
+
+  /* ── 送出按鈕 ── */
+  .submit-btn {
+    width: 100%; padding: 22px;
+    font-size: 1.6rem; font-weight: 900;
+    font-family: 'Noto Serif TC', serif;
+    letter-spacing: 4px;
+    background: linear-gradient(135deg, var(--rose) 0%, var(--rose2) 100%);
+    color: #fff; border: none; border-radius: 16px;
+    cursor: pointer;
+    box-shadow: 0 6px 24px rgba(200,96,122,0.45);
+    transition: all 0.2s;
+    margin-bottom: 16px;
+  }
+  .submit-btn:hover  { transform: translateY(-3px); box-shadow: 0 10px 30px rgba(200,96,122,0.5); }
+  .submit-btn:active { transform: translateY(1px); box-shadow: 0 3px 10px rgba(200,96,122,0.4); }
+  .submit-btn:disabled {
+    background: linear-gradient(135deg, #ccc 0%, #bbb 100%);
+    box-shadow: none; cursor: not-allowed; transform: none;
+  }
+
+  /* ── 成功畫面 ── */
+  .success-panel {
+    display: none;
+    background: linear-gradient(160deg, #FFF5F8 0%, #FDE8EE 100%);
+    border: 2px solid var(--rose3); border-radius: 20px;
+    padding: 32px 20px; text-align: center; margin-bottom: 16px;
+    box-shadow: 0 8px 32px var(--shadow);
+  }
+  .success-panel.show { display: block; }
+  .success-icon  { font-size: 4rem; margin-bottom: 10px; }
+  .success-title { font-size: 2rem; font-weight: 900; color: var(--rose); margin-bottom: 8px; letter-spacing: 2px; }
+  .success-msg   { font-size: 1.2rem; color: var(--ink); line-height: 1.9; margin-bottom: 20px; }
+
+  .order-card {
+    background: #fff; border: 2px solid var(--rose3);
+    border-radius: 14px; margin-bottom: 20px;
+    box-shadow: 0 4px 16px var(--shadow); overflow: hidden; text-align: left;
+  }
+  .order-row {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 16px 18px; gap: 12px;
+  }
+  .order-label { font-size: 1.15rem; color: #9A7080; font-weight: 700; white-space: nowrap; min-width: 72px; }
+  .order-value { font-size: 1.2rem; font-weight: 900; color: var(--ink); text-align: right; word-break: break-all; }
+  .order-email { font-size: 1rem; }
+  .order-divider { height: 1px; background: var(--rose3); margin: 0 18px; }
+
+  .screenshot-box {
+    background: rgba(255,255,255,0.8);
+    border: 2px dashed var(--rose3); border-radius: 12px;
+    padding: 18px; font-size: 1.15rem; color: var(--ink);
+    line-height: 2.2; margin-bottom: 20px;
+    font-weight: 700; text-align: left;
+  }
+  .line-btn {
+    display: block; width: 100%; padding: 20px;
+    background: #06C755; color: #fff;
+    font-size: 1.4rem; font-weight: 900;
+    text-decoration: none; text-align: center;
+    letter-spacing: 2px; font-family: 'Noto Serif TC', serif;
+    border-radius: 14px; box-shadow: 0 6px 20px rgba(6,199,85,0.35);
+    border: none;
+  }
+
+  /* ── Footer ── */
+  .footer {
+    text-align: center; font-size: 1.1rem;
+    color: #9A7080; padding: 20px 0 28px; line-height: 2.4;
+    border-top: 1px solid var(--rose3); margin-top: 4px;
+  }
+
+  /* ── Loading ── */
+  .loading-overlay {
+    display: none; position: fixed; inset: 0;
+    background: rgba(61,31,42,0.65); z-index: 999;
+    align-items: center; justify-content: center;
+    flex-direction: column; gap: 16px;
+  }
+  .loading-overlay.show { display: flex; }
+  .spinner {
+    width: 60px; height: 60px;
+    border: 6px solid rgba(232,132,154,0.3);
+    border-top-color: var(--rose2);
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  .loading-text { color: #fff; font-size: 1.4rem; font-weight: 700; letter-spacing: 2px; }
+
+  .petal-divider {
+    text-align: center; color: var(--rose3); font-size: 1.2rem;
+    margin: 4px 0 16px; letter-spacing: 6px;
+  }
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<div class="header">
+  <div class="header-flower">🌸 🌷 🌸</div>
+  <div class="store-name">嬤記香香雞　海佃店</div>
+  <div class="header-msg">
+    <div class="header-thanks">
+      嬤記香香雞要與所有母親說聲<br>
+      謝謝有妳 ❤️
+    </div>
+    <div class="header-sub">
+      在五月，專屬媽媽的特別日期<br>
+      妳們辛苦了！
+    </div>
+  </div>
+  <div class="badge">
+      <span class="badge-title">🍗 5/4 ～ 5/8 母親節特惠</span>
+      <span class="badge-items">
+        炸春雞 ×1<br>
+        ＋ 點心四拼盤<br>
+        　（水果・流心花生西多士・酥炸米血・酥脆地瓜薯條）<br>
+        ＋ 巴西檸檬飲 ×2
+      </span>
+      <span class="badge-price">只要 ＄３９９</span>
+    </div>
+</div>
+
+<!-- Soldout Banner -->
+<div class="soldout-banner" id="soldoutBanner">🌸 母親節炸春雞已全數售完，感謝支持 🌸</div>
+
+<!-- 選擇取貨日期 -->
+<div class="panel">
+  <div class="panel-title"><span class="panel-title-icon">📅</span>選擇取貨日期</div>
+  <div class="date-grid">
+    <div class="date-btn" id="dateBtn-0504" onclick="selectDate('05/04')">
+      <div class="db-month">五月</div>
+      <div class="db-date">4</div>
+      <div class="db-day">週一</div>
+      <div class="db-remain" id="dateRemain-0504">尚餘 18 份</div>
+      <div class="db-soldout-tag">已額滿</div>
+    </div>
+    <div class="date-btn" id="dateBtn-0505" onclick="selectDate('05/05')">
+      <div class="db-month">五月</div>
+      <div class="db-date">5</div>
+      <div class="db-day">週二</div>
+      <div class="db-remain" id="dateRemain-0505">尚餘 18 份</div>
+      <div class="db-soldout-tag">已額滿</div>
+    </div>
+    <div class="date-btn" id="dateBtn-0507" onclick="selectDate('05/07')">
+      <div class="db-month">五月</div>
+      <div class="db-date">7</div>
+      <div class="db-day">週四</div>
+      <div class="db-remain" id="dateRemain-0507">尚餘 18 份</div>
+      <div class="db-soldout-tag">已額滿</div>
+    </div>
+    <div class="date-btn" id="dateBtn-0508" onclick="selectDate('05/08')">
+      <div class="db-month">五月</div>
+      <div class="db-date">8</div>
+      <div class="db-day">週五</div>
+      <div class="db-remain" id="dateRemain-0508">尚餘 18 份</div>
+      <div class="db-soldout-tag">已額滿</div>
+    </div>
+  </div>
+  <div class="date-err" id="err-date">▲ 請先選擇取貨日期</div>
+</div>
+
+<!-- 庫存面板 -->
+<div class="panel">
+  <div class="panel-title"><span class="panel-title-icon">🍗</span>各日剩餘數量</div>
+  <div class="stock-tabs">
+    <div class="stock-tab active" id="tab-0504" onclick="switchStockTab('0504')">5/4</div>
+    <div class="stock-tab" id="tab-0505" onclick="switchStockTab('0505')">5/5</div>
+    <div class="stock-tab" id="tab-0507" onclick="switchStockTab('0507')">5/7</div>
+    <div class="stock-tab" id="tab-0508" onclick="switchStockTab('0508')">5/8</div>
+  </div>
+  <div class="stock-row">
+    <div class="stock-label">當日尚餘</div>
+    <div class="stock-counter">
+      <span class="stock-num" id="totalLeft">18</span>
+      <span class="stock-unit">隻</span>
+    </div>
+  </div>
+  <div class="progress-wrap">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+  <div class="progress-label" id="progressLabel">已預訂 0 / 18 隻</div>
+  <div class="slot-grid">
+    <div class="slot-card" id="disp-1600">
+      <div class="slot-card-time">16:00</div>
+      <div class="slot-card-left" id="dispLeft-1600">剩餘 4 份</div>
+    </div>
+    <div class="slot-card" id="disp-1700">
+      <div class="slot-card-time">17:00</div>
+      <div class="slot-card-left" id="dispLeft-1700">剩餘 8 份</div>
+    </div>
+    <div class="slot-card" id="disp-1800">
+      <div class="slot-card-time">18:00</div>
+      <div class="slot-card-left" id="dispLeft-1800">剩餘 6 份</div>
+    </div>
+  </div>
+</div>
+
+<!-- 注意事項 -->
+<div class="notice-panel">
+  <div class="notice-title">🌷 注意事項</div>
+  <div class="notice-text">
+    預訂成功如逾時超過 <strong>30 分鐘</strong> 未取回，嬤記有權利將炸雞於臉書限時動態釋出販售，為此保持雙方權利。
+  </div>
+  <div class="agree-row blink-border" id="agreeRow" onclick="toggleAgree()">
+    <div class="big-checkbox" id="checkbox">
+      <span class="check-icon">✓</span>
+    </div>
+    <div>
+      <div class="agree-label">我已閱讀並同意以上注意事項</div>
+      <div class="agree-hint" id="agreeHint">▶ 請先打勾同意，才能填寫預訂資料</div>
+    </div>
+  </div>
+</div>
+
+<!-- 表單 -->
+<div class="form-panel locked" id="formPanel">
+  <div class="panel-title"><span class="panel-title-icon">✏️</span>填寫預訂資料</div>
+
+  <div class="field-group">
+    <div class="field-label">姓名 <span class="req">*</span></div>
+    <input class="big-input" type="text" id="fname" placeholder="請輸入您的姓名">
+    <div class="error-msg" id="err-fname">▲ 請填寫姓名</div>
+  </div>
+
+  <div class="field-group">
+    <div class="field-label">電話 <span class="req">*</span></div>
+    <input class="big-input" type="tel" id="fphone" placeholder="請輸入聯絡電話">
+    <div class="error-msg" id="err-fphone">▲ 請填寫聯絡電話</div>
+  </div>
+
+  <div class="field-group">
+    <div class="field-label">信箱 <span class="req">*</span></div>
+    <input class="big-input" type="email" id="femail" placeholder="請輸入電子信箱">
+    <div class="error-msg" id="err-femail">▲ 請填寫正確的電子信箱</div>
+  </div>
+
+  <div class="field-group">
+    <div class="field-label">取貨日期 <span class="req">*</span></div>
+    <div class="date-display" id="dateDisplay">
+      <div class="date-display-icon">📅</div>
+      <div>
+        <div class="date-display-text" id="selectedDateText">尚未選擇</div>
+        <div class="date-display-hint">（請返回上方選擇日期）</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="field-group">
+    <div class="field-label">取餐時段 <span class="req">*</span></div>
+    <div class="slot-picker" id="slotPicker">
+      <div class="timeslot" data-slot="16:00" id="pick-1600" onclick="selectSlot(this)">
+        <div class="ts-time">16:00</div>
+        <div class="ts-left" id="pickLeft-1600">剩 4 份</div>
+      </div>
+      <div class="timeslot" data-slot="17:00" id="pick-1700" onclick="selectSlot(this)">
+        <div class="ts-time">17:00</div>
+        <div class="ts-left" id="pickLeft-1700">剩 8 份</div>
+      </div>
+      <div class="timeslot" data-slot="18:00" id="pick-1800" onclick="selectSlot(this)">
+        <div class="ts-time">18:00</div>
+        <div class="ts-left" id="pickLeft-1800">剩 6 份</div>
+      </div>
+    </div>
+    <div class="ts-error" id="err-slot">▲ 請選擇取餐時段</div>
+  </div>
+
+  <div class="field-group">
+    <div class="field-label">數量</div>
+    <div class="qty-fixed">
+      <div class="qty-fixed-num">1</div>
+      <div class="qty-fixed-note">每人限購 <strong>1 份</strong><br>（附阿嬤手路胡椒鹽）</div>
+    </div>
+  </div>
+</div>
+
+<!-- 送出 -->
+<button class="submit-btn" id="submitBtn" onclick="submitOrder()">
+  🌸 確認預訂 🌸
+</button>
+
+<!-- 成功畫面 -->
+<div class="success-panel" id="successPanel">
+  <div class="success-icon">🎉</div>
+  <div class="success-title">預訂成功！</div>
+  <div class="success-msg">感謝您的預訂，祝所有媽媽母親節快樂 🌷<br>請截圖此頁面傳給店家確認</div>
+
+  <div class="order-card">
+    <div class="order-row">
+      <span class="order-label">姓名</span>
+      <span class="order-value" id="sName">—</span>
+    </div>
+    <div class="order-divider"></div>
+    <div class="order-row">
+      <span class="order-label">電話</span>
+      <span class="order-value" id="sPhone">—</span>
+    </div>
+    <div class="order-divider"></div>
+    <div class="order-row">
+      <span class="order-label">信箱</span>
+      <span class="order-value order-email" id="sEmail">—</span>
+    </div>
+    <div class="order-divider"></div>
+    <div class="order-row">
+      <span class="order-label">取貨日期</span>
+      <span class="order-value" id="sDate">—</span>
+    </div>
+    <div class="order-divider"></div>
+    <div class="order-row">
+      <span class="order-label">取餐時段</span>
+      <span class="order-value" id="sSlot">—</span>
+    </div>
+    <div class="order-divider"></div>
+    <div class="order-row">
+      <span class="order-label">數量</span>
+      <span class="order-value" id="sQty">1 份</span>
+    </div>
+  </div>
+
+  <div class="screenshot-box">
+    📸 步驟一：截圖保存此畫面<br>
+    📲 步驟二：點下方按鈕加入 LINE<br>
+    💬 步驟三：傳送截圖給店家確認<br>
+    ⏰ 請於預訂時段 <strong>30 分鐘內</strong> 到店取餐
+  </div>
+  <a class="line-btn" href="https://lin.ee/wfsjiYi" target="_blank">
+    加入 LINE 官方帳號 → 傳截圖確認
+  </a>
+</div>
+
+<!-- Footer -->
+<div class="petal-divider">🌸 ❤️ 🌸</div>
+<div class="footer">
+  📍 台南市安南區海佃路二段 423 號<br>
+  （海佃路二段億進寢具對面，立翔汽車旁）<br>
+  ⏰ 週一至週五　15:00 ～ 19:30（售完為止）<br>
+  週五公休
+</div>
+
+<!-- Loading -->
+<div class="loading-overlay" id="loadingOverlay">
+  <div class="spinner"></div>
+  <div class="loading-text">預訂中，請稍候…</div>
+</div>
+
+<script>
+  // ═══════════════════════════════════════════
+  //  設定區
+  // ═══════════════════════════════════════════
+  const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxoMM8EbWqKnaFDrIbMtdAeefJa64OZC9YiyAksdCqaSlzNJ3dNvIkj8kw7HP0AaltB/exec';
+  const TOTAL    = 18;   // 每天上限 18 份
+  const SLOTS    = ['16:00','17:00','18:00'];
+  const SLOT_LIMITS = { '16:00': 4, '17:00': 8, '18:00': 6 };  // 各時段上限
+  const DATES    = ['05/04','05/05','05/07','05/08'];
+  const DATE_LABELS = {
+    '05/04': '5月4日（週一）',
+    '05/05': '5月5日（週二）',
+    '05/07': '5月7日（週四）',
+    '05/08': '5月8日（週五）'
+  };
+
+  // 四天各自庫存
+  const booked = {};
+  DATES.forEach(d => {
+    booked[d] = { '16:00': 0, '17:00': 0, '18:00': 0 };
+  });
+
+  let agreed       = false;
+  let selectedDate = null;
+  let selectedSlot = null;
+  let stockTabShown = '0504';
+
+  function slotKey(s) { return s.replace(':', ''); }
+  function dateKey(d) { return d.replace('/', ''); }
+  function totalBookedForDate(date) { return SLOTS.reduce((n, s) => n + booked[date][s], 0); }
+  function totalBookedAll() { return DATES.reduce((n, d) => n + totalBookedForDate(d), 0); }
+
+  // ── 選擇日期 ──
+  function selectDate(date) {
+    const key = dateKey(date);
+    if (document.getElementById('dateBtn-' + key).classList.contains('soldout-day')) return;
+    selectedDate = date;
+    selectedSlot = null;
+    document.querySelectorAll('.date-btn').forEach(b => b.classList.remove('selected'));
+    document.getElementById('dateBtn-' + key).classList.add('selected');
+    document.getElementById('selectedDateText').textContent = DATE_LABELS[date];
+    switchStockTab(key);
+    renderSlotPicker();
+    document.getElementById('err-date').classList.remove('show');
+  }
+
+  // ── 庫存 tab ──
+  function switchStockTab(key) {
+    stockTabShown = key;
+    document.querySelectorAll('.stock-tab').forEach(t => t.classList.remove('active'));
+    document.getElementById('tab-' + key).classList.add('active');
+    const date = key.slice(0,2) + '/' + key.slice(2);
+    renderStockPanel(date);
+  }
+
+  // ── 渲染庫存面板 ──
+  function renderStockPanel(date) {
+    const b   = booked[date];
+    const tot = TOTAL - totalBookedForDate(date);
+    const numEl = document.getElementById('totalLeft');
+    numEl.classList.remove('pop');
+    void numEl.offsetWidth;
+    numEl.textContent = tot;
+    if (tot <= 4) numEl.classList.add('pop');
+
+    const pct = Math.round(totalBookedForDate(date) / TOTAL * 100);
+    document.getElementById('progressBar').style.width = pct + '%';
+    document.getElementById('progressLabel').textContent = `已預訂 ${totalBookedForDate(date)} / ${TOTAL} 份`;
+
+    SLOTS.forEach(slot => {
+      const left = SLOT_LIMITS[slot] - b[slot];
+      const key  = slotKey(slot);
+      const dispCard = document.getElementById('disp-' + key);
+      const dispLeft = document.getElementById('dispLeft-' + key);
+      if (left <= 0) {
+        dispCard.classList.add('slot-full');
+        dispLeft.textContent = '✕ 已額滿';
+      } else {
+        dispCard.classList.remove('slot-full');
+        dispLeft.textContent = `剩餘 ${left} 份`;
+      }
+    });
+  }
+
+  // ── 渲染時段選擇器 ──
+  function renderSlotPicker() {
+    if (!selectedDate) return;
+    const b = booked[selectedDate];
+    document.querySelectorAll('.slot-picker .timeslot').forEach(el => el.classList.remove('selected'));
+    selectedSlot = null;
+    SLOTS.forEach(slot => {
+      const left = SLOT_LIMITS[slot] - b[slot];
+      const key  = slotKey(slot);
+      const pickCard = document.getElementById('pick-' + key);
+      const pickLeft = document.getElementById('pickLeft-' + key);
+      if (left <= 0) {
+        pickCard.classList.add('full');
+        pickLeft.textContent = '';
+        if (!pickCard.querySelector('.full-tag')) {
+          const tag = document.createElement('div');
+          tag.className = 'full-tag'; tag.textContent = '額滿';
+          pickCard.appendChild(tag);
+        }
+      } else {
+        pickCard.classList.remove('full');
+        pickLeft.textContent = `剩 ${left} 份`;
+        const tag = pickCard.querySelector('.full-tag');
+        if (tag) tag.remove();
+      }
+    });
+  }
+
+  // ── 日期按鈕剩餘 ──
+  function renderDateBtns() {
+    DATES.forEach(date => {
+      const key  = dateKey(date);
+      const left = TOTAL - totalBookedForDate(date);
+      const btn  = document.getElementById('dateBtn-' + key);
+      document.getElementById('dateRemain-' + key).textContent = left > 0 ? `尚餘 ${left} 份` : '已額滿';
+      if (left <= 0) {
+        btn.classList.add('soldout-day');
+        btn.classList.remove('selected');
+        if (selectedDate === date) selectedDate = null;
+      } else {
+        btn.classList.remove('soldout-day');
+      }
+    });
+    const allGone = DATES.every(d => totalBookedForDate(d) >= TOTAL);
+    document.getElementById('soldoutBanner').classList.toggle('show', allGone);
+    if (allGone) document.getElementById('submitBtn').disabled = true;
+  }
+
+  // ── 勾選同意 ──
+  function toggleAgree() {
+    agreed = !agreed;
+    document.getElementById('checkbox').classList.toggle('checked', agreed);
+    document.getElementById('agreeRow').classList.toggle('blink-border', !agreed);
+    document.getElementById('agreeHint').style.display = agreed ? 'none' : 'block';
+    document.getElementById('formPanel').classList.toggle('locked', !agreed);
+  }
+
+  // ── 選擇時段 ──
+  function selectSlot(el) {
+    if (!selectedDate) {
+      document.getElementById('err-date').classList.add('show');
+      document.getElementById('dateBtn-0504').scrollIntoView({ behavior: 'smooth' });
+      return;
+    }
+    if (el.classList.contains('full')) return;
+    document.querySelectorAll('.slot-picker .timeslot').forEach(s => s.classList.remove('selected'));
+    el.classList.add('selected');
+    selectedSlot = el.dataset.slot;
+    document.getElementById('err-slot').classList.remove('show');
+  }
+
+  function showErr(id, msg) {
+    const el = document.getElementById(id);
+    if (msg !== undefined) el.textContent = msg;
+    el.classList.add('show');
+  }
+  function hideErr(id) { document.getElementById(id).classList.remove('show'); }
+
+  // ── 驗證 ──
+  function validate() {
+    let ok = true;
+    if (!selectedDate) { showErr('err-date', '▲ 請先選擇取貨日期'); ok = false; } else hideErr('err-date');
+    const name  = document.getElementById('fname').value.trim();
+    const phone = document.getElementById('fphone').value.trim();
+    const email = document.getElementById('femail').value.trim();
+    if (!name)  { showErr('err-fname',  '▲ 請填寫姓名'); ok = false; } else hideErr('err-fname');
+    if (!phone || !/^[0-9()\-+\s]{8,15}$/.test(phone)) { showErr('err-fphone', '▲ 請填寫聯絡電話'); ok = false; } else hideErr('err-fphone');
+    if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { showErr('err-femail', '▲ 請填寫正確的電子信箱'); ok = false; } else hideErr('err-femail');
+    if (!selectedSlot) { showErr('err-slot', '▲ 請選擇取餐時段'); ok = false; } else hideErr('err-slot');
+    if (selectedSlot && selectedDate && booked[selectedDate][selectedSlot] >= SLOT_LIMITS[selectedSlot]) {
+      showErr('err-slot', '▲ 此時段已額滿，請選擇其他時段');
+      selectedSlot = null; ok = false;
+    }
+    return ok;
+  }
+
+  // ── 送出 ──
+  async function submitOrder() {
+    if (!agreed) { document.getElementById('agreeRow').scrollIntoView({ behavior: 'smooth' }); return; }
+    if (!validate()) return;
+
+    const name      = document.getElementById('fname').value.trim();
+    const phone     = document.getElementById('fphone').value.trim();
+    const email     = document.getElementById('femail').value.trim();
+    const timestamp = new Date().toLocaleString('zh-TW', { timeZone: 'Asia/Taipei' });
+
+    const params = new URLSearchParams({
+      action: 'order',
+      name, phone, email,
+      date:  selectedDate,
+      slot:  selectedSlot,
+      qty:   1,
+      timestamp
+    });
+
+    document.getElementById('loadingOverlay').classList.add('show');
+    document.getElementById('submitBtn').disabled = true;
+
+    try {
+      const res  = await fetch(SCRIPT_URL + '?' + params.toString());
+      const data = await res.json();
+
+      if (data.status === 'full') {
+        document.getElementById('loadingOverlay').classList.remove('show');
+        document.getElementById('submitBtn').disabled = false;
+        booked[selectedDate][selectedSlot] = SLOT_CAPS[selectedSlot];
+        renderSlotPicker();
+        alert('很抱歉，此時段剛剛已額滿，請重新選擇時段！');
+        return;
+      }
+    } catch(e) {}
+
+    booked[selectedDate][selectedSlot]++;
+    const tabDate = stockTabShown.slice(0,2) + '/' + stockTabShown.slice(2);
+    renderStockPanel(tabDate);
+    renderDateBtns();
+    renderSlotPicker();
+
+    document.getElementById('loadingOverlay').classList.remove('show');
+    showSuccess({ name, phone, email, date: selectedDate, slot: selectedSlot, qty: 1 });
+  }
+
+  // ── 成功畫面（無預訂編號） ──
+  function showSuccess(data) {
+    document.getElementById('sName').textContent  = data.name;
+    document.getElementById('sPhone').textContent = data.phone;
+    document.getElementById('sEmail').textContent = data.email;
+    document.getElementById('sDate').textContent  = DATE_LABELS[data.date];
+    document.getElementById('sSlot').textContent  = data.slot + ' 出爐';
+    document.getElementById('sQty').textContent   = data.qty + ' 份';
+    document.getElementById('formPanel').style.display  = 'none';
+    document.getElementById('submitBtn').style.display  = 'none';
+    document.getElementById('successPanel').classList.add('show');
+    document.getElementById('successPanel').scrollIntoView({ behavior: 'smooth' });
+    setTimeout(() => window.open('https://lin.ee/wfsjiYi', '_blank'), 3000);
+  }
+
+  // ── 從 Sheets 讀庫存 ──
+  // Apps Script getStock 需回傳：
+  // { "05/04":{...}, "05/05":{...}, "05/07":{...}, "05/08":{...} }
+  async function loadStock() {
+    try {
+      const res  = await fetch(SCRIPT_URL + '?action=getStock', { mode: 'cors' });
+      if (!res.ok) return;
+      const data = await res.json();
+      DATES.forEach(date => {
+        if (data[date]) {
+          SLOTS.forEach(slot => {
+            if (typeof data[date][slot] === 'number') booked[date][slot] = data[date][slot];
+          });
+        }
+      });
+    } catch(e) {}
+    renderStockPanel('05/04');
+    renderDateBtns();
+  }
+
+  // 初始化
+  renderStockPanel('05/04');
+  renderDateBtns();
+  loadStock();
+</script>
+</body>
+</html>
